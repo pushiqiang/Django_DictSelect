@@ -1,0 +1,11 @@
+{%if dict_value %}
+<select {%if select_id %}id="{{select_id}}"{%endif%} {%if select_name %}name="{{select_name}}"{%endif%} {%if select_class %}class="{{select_class}}"{%endif%}>
+    {% for var in dict_value %}
+        {% ifequal value var.itemname %}
+            <option value ="{{var.itemcode}}" selected>{{var.itemname}}</option>
+	{% else %}
+            <option value ="{{var.itemcode}}">{{var.itemname}}</option>
+	{%endifequal %} 
+    {% endfor %}
+</select>
+{%endif%}
