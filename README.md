@@ -1,0 +1,2 @@
+# Django_DictSelect
+使用inclusion_tag标签封装数据字典
